@@ -19,7 +19,7 @@
   <script>
     // Register service worker for offline use
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js').catch(console.error);
+      navigator.serviceWorker.register('sw.js', { scope: './' }).catch(console.error);
     }
 
     // ===== Canvas boot =====
@@ -240,3 +240,4 @@
   </script>
 </body>
 </html>
+
