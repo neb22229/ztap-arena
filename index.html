@@ -409,5 +409,14 @@ function boot(){
 
 boot();
 </script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js?v=ztap-arena-v3')
+    .then(() => console.log("✅ Service Worker registered"))
+    .catch(err => console.warn("SW registration failed:", err));
+}
+</script>
+
 </body>
 </html>
